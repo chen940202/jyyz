@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <!-- 定义日志的根目录 -->
+    <property name="LOG_HOME" value="logs"/>
+    <!-- 控制台输出 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS}-[%t]-[ %-5level ] [ %logger{50} : %line ] - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+
+    <!-- aop日志输出-all -->
+    <appender name="log-all" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -[%t]- [ %-5level ] [ %logger{50} : %line ] - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <file>./${LOG_HOME}/log-all.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/log-all-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+    <!-- aop日志输出-all -->
+    <appender name="mq-all" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -[%t]- [ %-5level ] [ %logger{50} : %line ] - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <file>./${LOG_HOME}/mq-all.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/mq-all-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+    <!-- 文件输出 filter-all-->
+    <appender name="filter-all" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -[%t]- [ %-5level ] [ %logger{50} : %line ] - %msg%n</pattern>
+            <charset>utf8</charset>
+        </encoder>
+        <file>./${LOG_HOME}/filter-all.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/filter-all-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <maxHistory>7</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <!--输出到error-all-->
+    <appender name="error-all" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/error-all.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/error-all-%d{yyyy-MM-dd}-%i.log</fileNamePattern>
+            <MaxHistory>30</MaxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -[%t]- [ %-5level ] [ %logger{50} : %line ] - %msg%n</pattern>
+        </layout>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+    <logger name="com.qianxingniwo.common.interceptor.HttpServletRequestWrapperFilter" level="info" additivity="true">
+        <appender-ref ref="filter-all"/>
+    </logger>
+    <logger name="com.qianxingniwo.mq.RabbitMqConfig" level="debug" additivity="true">
+        <appender-ref ref="mq-all"/>
+    </logger>
+    <logger name="com.qianxingniwo.mq" level="debug" additivity="true">
+        <appender-ref ref="mq-all"/>
+    </logger>
+    <logger name="com.qianxingniwo.biz.service.MqService" level="debug" additivity="true">
+        <appender-ref ref="mq-all"/>
+    </logger>
+    <!-- 基础日志输出级别 -->
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="log-all"/>
+        <appender-ref ref="error-all"/>
+    </root>
+
+</configuration>

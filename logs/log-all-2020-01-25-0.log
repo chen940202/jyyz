@@ -1,0 +1,46 @@
+2020-01-25 10:27:00.640 -[main]- [ INFO  ] [ com.chen.wechat.WechatApplication : 50 ] - Starting WechatApplication on DESKTOP-10FFVAI with PID 10724 (F:\chen\wechat\wechat\target\classes started by chen in F:\chen\wechat\wechat)
+2020-01-25 10:27:00.640 -[main]- [ INFO  ] [ com.chen.wechat.WechatApplication : 679 ] - The following profiles are active: prod
+2020-01-25 10:27:01.890 -[main]- [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-25 10:27:01.890 -[main]- [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-25 10:27:01.937 -[main]- [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 32ms. Found 0 repository interfaces.
+2020-01-25 10:27:02.280 -[main]- [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a73a0e13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-25 10:27:02.608 -[main]- [ INFO  ] [ o.s.boot.web.embedded.tomcat.TomcatWebServer : 90 ] - Tomcat initialized with port(s): 8089 (http)
+2020-01-25 10:27:02.624 -[main]- [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2020-01-25 10:27:02.624 -[main]- [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+2020-01-25 10:27:02.624 -[main]- [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2020-01-25 10:27:02.624 -[main]- [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+2020-01-25 10:27:02.624 -[main]- [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-25 10:27:02.624 -[main]- [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-25 10:27:02.749 -[main]- [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2020-01-25 10:27:02.858 -[main]- [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2020-01-25 10:27:02.858 -[main]- [ INFO  ] [ org.springframework.web.context.ContextLoader : 296 ] - Root WebApplicationContext: initialization completed in 2155 ms
+2020-01-25 10:27:03.468 -[main]- [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-25 10:27:03.952 -[main]- [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService
+2020-01-25 10:27:04.186 -[main]- [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-25 10:27:04.186 -[main]- [ INFO  ] [ org.springframework.web.servlet.DispatcherServlet : 524 ] - Initializing Servlet 'dispatcherServlet'
+2020-01-25 10:27:04.186 -[main]- [ INFO  ] [ org.springframework.web.servlet.DispatcherServlet : 546 ] - Completed initialization in 0 ms
+2020-01-25 10:27:04.186 -[main]- [ INFO  ] [ o.s.boot.web.embedded.tomcat.TomcatWebServer : 204 ] - Tomcat started on port(s): 8089 (http) with context path ''
+2020-01-25 10:27:04.186 -[main]- [ INFO  ] [ com.chen.wechat.WechatApplication : 59 ] - Started WechatApplication in 4.015 seconds (JVM running for 6.107)
+2020-01-25 17:51:40.551 -[main]- [ INFO  ] [ com.chen.wechat.WechatApplication : 50 ] - Starting WechatApplication on DESKTOP-10FFVAI with PID 16448 (F:\chen\wechat\wechat\target\classes started by chen in F:\chen\wechat\wechat)
+2020-01-25 17:51:40.666 -[main]- [ INFO  ] [ com.chen.wechat.WechatApplication : 679 ] - The following profiles are active: prod
+2020-01-25 17:51:43.046 -[main]- [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-01-25 17:51:43.049 -[main]- [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-01-25 17:51:43.080 -[main]- [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2020-01-25 17:51:43.512 -[main]- [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c801f362] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-01-25 17:51:43.835 -[main]- [ INFO  ] [ o.s.boot.web.embedded.tomcat.TomcatWebServer : 90 ] - Tomcat initialized with port(s): 8089 (http)
+2020-01-25 17:51:43.859 -[main]- [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2020-01-25 17:51:43.859 -[main]- [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+2020-01-25 17:51:43.864 -[main]- [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - An older version [1.2.18] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2020-01-25 17:51:43.864 -[main]- [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+2020-01-25 17:51:43.864 -[main]- [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-01-25 17:51:43.865 -[main]- [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-01-25 17:51:43.983 -[main]- [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 173 ] - OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+2020-01-25 17:51:44.088 -[main]- [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2020-01-25 17:51:44.088 -[main]- [ INFO  ] [ org.springframework.web.context.ContextLoader : 296 ] - Root WebApplicationContext: initialization completed in 3030 ms
+2020-01-25 17:51:44.827 -[main]- [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-25 17:51:45.495 -[main]- [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService
+2020-01-25 17:51:45.853 -[main]- [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-25 17:51:45.853 -[main]- [ INFO  ] [ org.springframework.web.servlet.DispatcherServlet : 524 ] - Initializing Servlet 'dispatcherServlet'
+2020-01-25 17:51:45.858 -[main]- [ INFO  ] [ org.springframework.web.servlet.DispatcherServlet : 546 ] - Completed initialization in 4 ms
+2020-01-25 17:51:45.860 -[main]- [ INFO  ] [ o.s.boot.web.embedded.tomcat.TomcatWebServer : 204 ] - Tomcat started on port(s): 8089 (http) with context path ''
+2020-01-25 17:51:45.861 -[main]- [ INFO  ] [ com.chen.wechat.WechatApplication : 59 ] - Started WechatApplication in 5.991 seconds (JVM running for 9.014)

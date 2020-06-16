@@ -1,0 +1,25 @@
+# 开发环境 dev 测试环境  生产环境 prod
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 400MB
+
+#白名单
+white-url:
+  whiteList:
+  - '/api/jd/hot/sale'
+
+
+
+#u上传配置
+upload_config:
+  typeList:
+    - 'jpg'
+    - 'png'
+  url: upload
+  httpUrl: http://ypjtest.hztx18.com/
+
+

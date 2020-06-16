@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.chen.wechat.mapper.WxUserInfoDao">
+
+    <insert id="insert" parameterType="com.chen.wechat.model.WxUserInfoEntity">
+        INSERT INTO wx_user_info(STATUS,wx_open_id,create_time)
+        SELECT
+        0,
+        #{wxOpenId},
+        NOW()
+        FROM DUAL
+        WHERE NOT EXISTS(SELECT 1 FROM wx_user_info t WHERE t.wx_open_id = #{wxOpenId})
+    </insert>
+</mapper>

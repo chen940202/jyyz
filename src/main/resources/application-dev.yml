@@ -1,0 +1,111 @@
+#引用指定配置文件
+server:
+  servlet:
+    context-path: /
+  port: 9002
+# 数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/chen?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  aop:
+    auto: true
+    proxy-target-class: true
+  #单机版
+  # Redis服务器地址
+  #spring: redis: host: 192: 168: 5: 198
+  # Redis服务器连接端口
+  #spring: redis: port: 6379
+  #集群版
+  redis:
+    cluster:
+      nodes: 192.168.0.111:6379,192.168.0.112:6379,192.168.0.113:6379,192.168.0.114:6379,192.168.0.115:6379,192.168.0.116:6379
+    jedis:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 200
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池中的最大空闲连接
+        max-idle: 50
+
+        # 连接池中的最小空闲连接
+        min-idle: 10
+
+    #连接超时时间（毫秒）
+    timeout: 60000
+    #是否开启redis测试 no 关闭 yes开启
+    qx-redis-test: yes
+    # Redis数据库索引（默认为0）
+    database: 0
+  async:
+    config:
+      corePoolSize:  10
+      maxPoolSize:  200
+      queueCapacity:  20
+  rabbitmq:
+    addresses: 192.168.106.235,192.168.106.236
+    port: 5672
+    username: admin
+    password: admin
+    publisher-confirms: true
+    publisher-returns: true
+    #最大消费者数量
+    max:
+      consumer:  50
+      #同一时间接受消息量
+    prefetch:
+      count:  1
+  #Mybatis 配置
+mybatis:
+  type-aliases-package: com.qianxingniwo.domain.model
+  mapper-locations: classpath*:mapper/*.xml
+  #默认驼峰映射
+  configuration:
+    mapUnderscoreToCamelCase: true
+
+  #分页插件
+pagehelper:
+  helper-dialect: MYSQL
+  reasonable: false
+  support-methods-arguments: true
+
+  params: count=countSql
+#起别名。可省略写mybatis的xml中的resultType的全路径
+
+
+#系统日志
+
+#spring aop配置
+
+#
+#swagger 开关
+swagger:
+  enable: true
+
+#签名key 用于请求线上环境的accessToken
+sign:
+  secret: f02637209064e9158374d618a6dfa056
+
+#sql日志
+logging:
+  level:
+    root: info
+    com.qianxingniwo.mapper : debug
+  #系统日志
+  config:  classpath:logback.xml
+
+
+
+
+
